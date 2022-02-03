@@ -48,3 +48,9 @@ function main_detection(){
   done
   echo $same_device>&2
 }
+
+function get_last_file(){
+  lfn=$1
+  last=$(ls | grep -Po "$lfn\d+\.png" | sort -n | head -n 1)
+  echo $last
+}
