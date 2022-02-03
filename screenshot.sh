@@ -1,8 +1,10 @@
 #!/bin/bash
 device=$1
-fn="_screenshot"
-if [ -z "$1" ]
-then
+fn=$2
+if [ -z "$2" ]; then
+  fn="_screenshot"
+fi
+if [ -z "$1" ]; then
  source .default_device
   adb -s "$device" shell screencap -p > $fn.png
 else

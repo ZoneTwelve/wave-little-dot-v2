@@ -1,0 +1,7 @@
+#!/bin/bash
+for i in {1..5}
+do
+  echo "$i"
+  ./screenshot.sh 2 "img_test_$i" && display "img_test_$i.png" &
+  sleep 1
+done
