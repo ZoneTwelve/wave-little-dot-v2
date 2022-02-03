@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source ./zdb.sh
+zdb shell
